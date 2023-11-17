@@ -1,0 +1,119 @@
+<!----------------------------------------------------------
+Programmer: Daniel Feller
+Start Date: 3/26/2023
+
+index.html
+
+This is the core HTML file for the website
+-- Primary use is to self teach myself HTML, CSS, and JS
+   for basic Web Design & Development. Long term use as 
+   Portfolio Website to store pet projects for interested
+   employers
+----------------------------------------------------------->
+
+<!DOCTYPE html> <!-- COMMENTS ARE MADE LIKE THIS -->
+<html lang = "en">
+    <head> <!-- we use head to store our metadata (user won't see this afaik)-->
+        <meta charset="UTF-8">
+        <meta name="author" content="Daniel Feller"> <!--meta tag "author" signifies author of website (duh)-->
+        <meta name="keywords" content="Daniel Feller Portfolio Website, Daniel Feller">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta http-equiv="X-UA-Ccompatible" content="IE=edge">
+
+        <title>Daniel Feller - Portfolio Website</title>
+        <link rel="stylesheet" href="style.css"> <!-- connecting style.css-->
+    </head>
+    <body>
+        <!--div tag seems to be intended only for creating partitions in HTML code for CSS or JS manipulation afaik-->
+        
+        <!-------------------------------------------------------HEADER SECTION------------------------------------------------------->
+        <div id="header">
+            <div class="title-container">
+                <!--creates a set of navigation links (hyperlinks)-->
+                <nav> 
+                    <div id="name"><b>Daniel Feller</b></div>
+                    <!--unordered list (ul) & its list elements (li)-->
+                    <ul>
+                        <li><a id="home-nav" href="#">Home</a></li> <!--'a' defines a hyperlink-->
+                        <li><a id="about-nav" href="#">About</a></li>
+                        <li><a id="portfolio-nav" href="#">Portfolio</a></li>
+                        <li><a id="contact-nav" href="#">Contacts</a></li>
+                    </ul>
+                </nav>
+                <!--HEADER, TITLE & NAME (the first thing you see)-->
+                <div class="title-section">
+                    <div class="header-text">
+                        <p>Computational Software & Mathematics Student</p>
+                        <h1>Daniel Feller</h1>
+                    </div>
+                    <img src="images/placeholder1.jpg" width="700" height="500" id="title-image">
+                </div>
+            </div>
+        </div>
+        <!-------------------------------------------------------ABOUT------------------------------------------------------->
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="contact-left">
+                        <!--We can include pdf files and embed them into the site with object tag-->
+                        <object data="images/Daniel Feller - Resume 2023.pdf" type="application/pdf" width="100%" height="550px">
+                            <p>Unable to display PDF file. <a href="images/Daniel Feller - Resume 2023.pdf">Download</a> instead.</p>
+                        </object>
+                    </div>
+                    <div class="contact-right">
+                        <h1 class="sub-section">About Me</h1>
+                        <a href="images/Daniel Feller - Resume 2023.pdf" download="Daniel Feller - Resume"class="btn"><img src="images/download.png" width="25" height="25" id="download"><b>  Resume Download</b></a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-------------------------------------------------------PORTFOLIO SECTION------------------------------------------------------->
+        <div id="portfolio">
+            <div class="container">
+                <div class="row">
+                    <div class="contact-left">
+                        <h1 class="sub-section">Portfolio</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-------------------------------------------------------CONTACT INFO------------------------------------------------------->
+        <div id="contact">
+            <div class="container">
+                <div class="row"> <!--we will create 2 columns-->
+                    <div class="contact-left">
+                        <h1 class="sub-section">Contact Me</h1>
+                        <p><img src="images/gmail.png" width="25" height="20" id="gmail">  danielfeller2001@gmail.com</p>
+                        <p>(773) 807-6381</p>
+                        <div class="social-icons">
+                            <a href="https://github.com/danFeller" target="_blank"><img src="images/github.png" width="25" height="25" id="github"><b>   GitHub</b></a>
+                            <a href="https://linkedin.com/in/danielfeller2001" target="_blank"><img src="images/linkedIn.png" width="25" height="25" id="linkedIn"><b>   LinkedIn</b></a>
+                        </div>
+                    </div>
+                    <div class="contact-right">
+                    </div>  
+                </div>
+            </div>
+        </div>
+        <hr id="bottom">
+        <div id="copyright">
+            © 2023 - Daniel Feller
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </body>
+</html>

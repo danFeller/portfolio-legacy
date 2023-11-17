@@ -1,0 +1,192 @@
+/*****************************************
+Programmer: Daniel Feller
+Start Date: 3/26/2023
+
+style.css
+
+This is the main cascading style sheet
+for index.html
+-- Primary use is to organize and decorate
+   the HTML web page
+*****************************************/
+
+/*I hate how comments are in CSS tbh*/
+/*asterisk selector affects all HTML tags*/
+*{
+    margin: 0;
+
+    /*you can set how many pixels of space a specific element has around it (in pixels)*/
+    padding: 0;
+    font-family:'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    color: white;
+    background-image: url("images/purple-gradient.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%
+}
+
+/*navigation bar has a gray overlay*/
+.container{
+    padding: 10px 10%;
+    border-color: #ff004f;
+    
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.title-container nav{
+    background-color: #4e4e4e38;
+    padding-inline: 100px 10%;
+}
+#name{
+    font-size: 30px;
+    width: 400px;
+    padding: 25px;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+
+/*animation experiment*/
+#about-nav:hover::after, #home-nav:hover::after, #portfolio-nav:hover::after, #contact-nav:hover::after{
+    width: 100%;
+}
+#about-nav::after{
+    background: #0065d2;
+}
+#home-nav::after{
+    background: #ff000089;
+}
+#portfolio-nav::after{
+    background: #158a00;
+}
+#contact-nav::after{
+    background: #c3a900;
+}
+#about-nav::after, #home-nav::after, #portfolio-nav::after, #contact-nav::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+.sub-section{
+    font-size: 60px;
+}
+
+
+/*TITLE SECTION MODIFIERS*/
+.title-section{
+    display: flex;
+    margin-top: 10%;
+    margin-right: 7%;
+    justify-content: space-between;
+
+}
+#title-image{ /* rounded borders :O */
+    border-radius: 40px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.header-text{
+    padding: 10px 10%;
+    margin-top: 12%;
+    font-size: 30px;
+}
+.header-text h1{
+    font-size: 60px;
+}
+
+hr.solid{
+    border-top: 3px solid #fff;
+    margin: 8% 2% 2%;
+}
+
+/*I can group IDs together in one style component*/
+
+
+/*ABOUT SECTION*/
+.btn{
+    display:block;
+    font-size: 24px;
+    width: fit-content;
+    padding: 14px 14px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: white;
+    transition: 0.5s;
+}
+.btn:hover{
+    background: rgba(255, 255, 255, 0.396);
+}
+
+/*CONTACT SECTION*/
+.contact-left{
+    flex-basis: 35%;
+}
+.contact-right{
+    flex-basis: 60%;
+}
+
+.contact-left p{
+    margin-top: 30px;
+}
+.contact-left p i{
+    color: #ff004f;
+    margin-right: 15px;
+    font-size: 25px;
+}
+.social-icons{
+    margin-top: 30px;
+}
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    padding: 10px;
+    margin-right: 15px;
+    color: #ffffff;
+    display: inline-block;
+    border-radius: 5px;
+    transition: transform 0.5s;   
+}
+.social-icons a:hover{
+    background-color: rgba(255, 255, 255, 0.396);
+    transform: translateY(-5px);
+}
+
+
+
+
+#bottom{
+    border-top: 3px solid #fff;
+    margin: 4% 2% 1%;
+}
+#copyright{
+    margin-left: 5%;
+    margin-bottom: 1%;
+    font-size: 18px;
+    opacity: 50%;
+}
